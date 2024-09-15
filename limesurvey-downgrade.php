@@ -236,8 +236,8 @@ class LimeSurveyDowngrade {
                         $rows[(string) $r->qid] = $r;
                         if (!isset($r->language)) {
                             $r->language = $lang;
-                            $r->addChildWithCData('question', $qr[$lang][(string) $r->gid]['question']);
-                            $r->addChildWithCData('help', $qr[$lang][(string) $r->gid]['help']);
+                            $r->addChildWithCData('question', $qr[$lang][(string) $r->qid]['question']);
+                            $r->addChildWithCData('help', $qr[$lang][(string) $r->qid]['help']);
                             unset($r->encrypted);
                             unset($r->question_theme_name);
                             unset($r->same_script);
